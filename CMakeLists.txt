@@ -21,6 +21,9 @@ endif()
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c11")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O2 -fPIC -Wno-narrowing")
 
+# Set override include to find google protobuf includes
+include_directories("/databricks/python3/include")
+
 # Print configuration summary.
 include(cmake/Summary.cmake)
 detectron_print_config_summary()
